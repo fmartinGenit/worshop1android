@@ -40,6 +40,9 @@
             app:destination="@id/startFragment"
             app:popUpTo="@id/startFragment"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="Argumento"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/pickupFragment"

@@ -37,7 +37,7 @@ class FlavorFragment : Fragment() {
 
     // Use the 'by activityViewModels()' Kotlin property delegate from the fragment-ktx artifact
     private val sharedViewModel: OrderViewModel by activityViewModels()
-
+    var Titulo = 0
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -49,7 +49,10 @@ class FlavorFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        arguments?.let {
+            val args = FlavorFragmentArgs.fromBundle(it)
+            Titulo = args.argumento
+        }
         binding?.apply {
             // Specify the fragment as the lifecycle owner
             lifecycleOwner = viewLifecycleOwner
@@ -57,6 +60,7 @@ class FlavorFragment : Fragment() {
             // Assign the view model to a property in the binding class
             viewModel = sharedViewModel
 
+            titulo.text = Titulo.toString()
             // Assign the fragment
             flavorFragment = this@FlavorFragment
         }
