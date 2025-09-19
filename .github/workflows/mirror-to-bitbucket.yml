@@ -23,7 +23,7 @@ jobs:
       - name: Agregar remoto Bitbucket
         env:
           BB_USER: "x-bitbucket-api-token-auth"
-          BB_PASS: ${{ secrets.REPOSITORY_BITBUCKET }}
+          BB_PASS: ${{ secrets.API_TOKEN_BITBUCKET }}
           BB_REMOTE: "https://bitbucket.org/genitsrl/al2-android.git" # https://bitbucket.org/<workspace>/<repo>.git
         run: |
           git remote add bitbucket "https://${BB_USER}:${BB_PASS}@${BB_REMOTE#https://}"
