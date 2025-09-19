@@ -24,7 +24,7 @@ jobs:
         env:
           BB_USER: "fmartin"
           BB_PASS: "ATATT3xFfGF0S49kz89bcr75Qj_ozzH0__g7z65ZJ3nSUVJzyEAqQ5jSxWC03vRRP4FZ17PJYPfYhXMtEkhX4eiIUITGBar0X8OY4EFRESocnPYt8n2WkjG15MDHbuYxX1_6Cjoo3twjeMwHYLNnznW-TyXs0cjtyPaDHpz1wxK7CYyk0txHYnA=EC9EA29B"
-          BB_REMOTE: "https://fmartin6@bitbucket.org/genitsrl/al2-android.git" # https://bitbucket.org/<workspace>/<repo>.git
+          BB_REMOTE: "https://bitbucket.org/genitsrl/al2-android.git" # https://bitbucket.org/<workspace>/<repo>.git
         run: |
           git remote add bitbucket "$BB_REMOTE"
           git fetch --all --prune
